@@ -18,13 +18,13 @@ export class InventoryPage {
     this.productCardContainer = this.page.locator(".inventory_item");
   }
   async goTo() {
-    await this.page.goto("https://www.saucedemo.com/inventory.html");
+    await this.page.goto("/inventory.html");
   }
   async checkTitle() {
     await expect(this.secondTitle).toBeVisible();
   }
   async urlCheck() {
-    await expect(this.page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    await expect(this.page).toHaveURL("/inventory.html");
   }
   async filter(sortText: SortOptionT) {
     await this.filterIcon.selectOption({ label: sortText });

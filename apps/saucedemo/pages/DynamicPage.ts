@@ -18,13 +18,13 @@ export class DynamicPage {
   }
 
   async goToSpinner() {
-    await this.page.goto("https://www.saucedemo.com/dynamic-catalog-spinner.html");
+    await this.page.goto("/dynamic-catalog-spinner.html");
   }
   async goToLazyLoad() {
-    await this.page.goto("https://www.saucedemo.com/dynamic-catalog-lazy-load.html");
+    await this.page.goto("/dynamic-catalog-lazy-load.html");
   }
   async goToSlider() {
-    await this.page.goto("https://www.saucedemo.com/dynamic-catalog-slider.html");
+    await this.page.goto("/dynamic-catalog-slider.html");
   }
   async scrollDown() {
     await this.page.mouse.wheel(0, 2000);

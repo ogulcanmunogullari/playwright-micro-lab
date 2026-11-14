@@ -25,11 +25,11 @@ export class CheckoutPage {
   }
 
   async urlCheck() {
-    await expect(this.page).toHaveURL("https://www.saucedemo.com/checkout-step-one.html");
+    await expect(this.page).toHaveURL("/checkout-step-one.html");
   }
 
   async paymentUrlCheck() {
-    await expect(this.page).toHaveURL("https://www.saucedemo.com/checkout-step-two.html");
+    await expect(this.page).toHaveURL("/checkout-step-two.html");
   }
 
   async fillFirstName(firstName: string) {

@@ -20,8 +20,14 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
         env:
-          STORAGE_STATE_PATH: playwright/.auth/saucedemo-user.json
+          STORAGE_STATE_PATH_SAUCE: playwright/.auth/saucedemo-user.json
           SAUCEDEMO_BASE_URL: https://www.saucedemo.com
+          SAUCEDEMO_USER: ${{ secrets.SAUCEDEMO_USER }}
+          SAUCEDEMO_PASS: ${{ secrets.SAUCEDEMO_PASS }}
+          STORAGE_STATE_PATH_HEROKUAPP: playwright/.auth/herokuapp-user.json
+          HEROKUAPP_BASE_URL: https://the-internet.herokuapp.com
+          HEROKU_USER: ${{ secrets.HEROKU_USER }}
+          HEROKU_PASS: ${{ secrets.HEROKU_PASS }}
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:

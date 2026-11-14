@@ -13,7 +13,7 @@ export class LoginPage {
   }
 
   async goToSaucedemo() {
-    await this.page.goto("https://www.saucedemo.com/");
+    await this.page.goto("/");
   }
   async loginForm(username: string, password: string) {
     await this.usernameInput.fill(username);

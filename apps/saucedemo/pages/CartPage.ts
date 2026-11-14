@@ -16,7 +16,7 @@ export class CartPage {
   }
 
   async urlCheck() {
-    await expect(this.page).toHaveURL("https://www.saucedemo.com/cart.html");
+    await expect(this.page).toHaveURL("/cart.html");
   }
 
   private async takeItemPrice(card: Locator) {
