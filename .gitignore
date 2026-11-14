@@ -1,0 +1,16 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Local environment variables
+.env
+.env.local
+
+# Auth states (Çerez verileri)
+playwright/.auth/*.json
+!playwright/.auth/.gitkeep
